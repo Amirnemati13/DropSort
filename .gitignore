@@ -1,0 +1,12 @@
+/target/
+*.pdb
+*.exe
+*.dll
+*.zip
+.env
+.env.*
+!.env.example
+/.idea/
+/.vscode/
+Thumbs.db
+.DS_Store
