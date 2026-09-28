@@ -17,8 +17,8 @@ Verified locally on Windows x64 with Rust 1.98.1 and the `x86_64-pc-windows-gnu`
 
 The automated suite covers all seven categories, case-insensitive extensions, batch duplicate names, repeated selections, non-file rejection, already-sorted files, Unicode names, stale destination conflicts, partial batches, edited files, recreated originals, locked source files, empty files, and retrying Undo after a missing original parent is recreated.
 
-`screenshot.png` is a real capture of the running application using generated demonstration files. The screenshot is from the GUI smoke test; the final build additionally enables accessibility support and validates the original parent folder before Undo.
+`screenshot.png` is a real, cursor-free capture of the final application home screen. The final build enables accessibility support and validates the original parent folder before Undo.
 
 Not manually exercised: Explorer drag-and-drop gestures, physical cross-drive moves, removable/network drives, power-loss recovery, and Windows versions other than the local test machine. The app uses eframe's native dropped-file events. Cross-drive transfers use Windows copy/delete semantics and are not atomic. Undo history is intentionally limited to the current session.
 
-GitHub Actions is configured to independently run formatting, linting, tests, and a release build on Windows with the MSVC toolchain. Its status should be checked on the repository rather than inferred from this local report.
+[Windows CI run 36319153063](https://github.com/Amirnemati13/DropSort/actions/runs/36319153063) independently passed formatting, linting, tests, release build, and artifact upload with the MSVC toolchain. This result was verified on September 28, 2026.
